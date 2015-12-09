@@ -26,6 +26,10 @@ PyDoc_STRVAR(cPickle_module_documentation,
 #endif
 
 /*
+ * Note: The UNICODE macro controls the TCHAR meaning of the win32 API. Since
+ * all headers have already been included here, we can safely redefine it.
+ */
+/*
  * Pickle opcodes.  These must be kept in synch with pickle.py.  Extensive
  * docs are in pickletools.py.
  */
