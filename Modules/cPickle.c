@@ -109,6 +109,10 @@ PyDoc_STRVAR(cPickle_module_documentation,
  * break if this gets out of synch with pickle.py, but it's unclear that
  * would help anything either.
  */
+ /*
+ * Note: The UNICODE macro controls the TCHAR meaning of the win32 API. Since
+ * all headers have already been included here, we can safely redefine it.
+ */
 #define BATCHSIZE 1000
 
 static char MARKv = MARK;
