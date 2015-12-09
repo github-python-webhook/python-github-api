@@ -26,6 +26,10 @@ PyDoc_STRVAR(cPickle_module_documentation,
 #endif
 
 /*
+ * Note: The UNICODE macro controls the TCHAR meaning of the win32 API. Since
+ * all headers have already been included here, we can safely redefine it.
+ */
+/*
  * Pickle opcodes.  These must be kept in synch with pickle.py.  Extensive
  * docs are in pickletools.py.
  */
@@ -71,6 +75,11 @@ PyDoc_STRVAR(cPickle_module_documentation,
 #define EMPTY_TUPLE ')'
 #define SETITEMS    'u'
 
+
+/*
+ * Note: The UNICODE macro controls the TCHAR meaning of the win32 API. Since
+ * all headers have already been included here, we can safely redefine it.
+ */
 /* Protocol 2. */
 #define PROTO	 '\x80' /* identify pickle protocol */
 #define NEWOBJ   '\x81' /* build object by applying cls.__new__ to argtuple */
@@ -99,6 +108,10 @@ PyDoc_STRVAR(cPickle_module_documentation,
  * batch_list/dict() pumps out before doing APPENDS/SETITEMS.  Nothing will
  * break if this gets out of synch with pickle.py, but it's unclear that
  * would help anything either.
+ */
+ /*
+ * Note: The UNICODE macro controls the TCHAR meaning of the win32 API. Since
+ * all headers have already been included here, we can safely redefine it.
  */
 #define BATCHSIZE 1000
 
